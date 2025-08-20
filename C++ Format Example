@@ -1,0 +1,17 @@
+// C++ programming
+#include <iostream>
+using namespace std;
+
+int main() {
+  double radius;
+  double area;
+
+  cout << "Enter a radius: ";
+  cin >> radius;
+
+  area = radius*radius*3.14159;
+  // End signs are only when variable is being used
+  cout << "The area is" << area << endl;
+
+  return 0;
+}
