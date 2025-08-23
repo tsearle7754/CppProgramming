@@ -1,9 +1,9 @@
 // C++ programming
-#include <iostream>
-using namespace std;
+#include <iostream>   >>> #include is preprocessor, <iostream> is a library
+using namespace std;  >>> using the standard namespace
 
 int main() {
-  double radius;
+  double radius;      >>> assigning a variable as double, could initialize (radius = ...) in the same step
   double area;
 
   cout << "Enter a radius: ";
