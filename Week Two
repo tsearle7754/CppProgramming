@@ -1,0 +1,9 @@
+random numbers: 
+- rand()
+- <cstdlib> library for rand() and srand()
+- use srand(time(0)); before rand function
+- include <ctime> library for time function
+
+mathematical functions:
+- header file is <cmath>
+- 
