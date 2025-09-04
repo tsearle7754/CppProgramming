@@ -10,7 +10,7 @@ int main() {
     
     // Find and display characters at odd index positions
     for (int i = 1; i < message.size(); i+= 2) {
-        cout << message[i];
+        cout << message[i] << endl;
     }
     return 0;
 }
