@@ -1,0 +1,84 @@
+// C++ programming
+#include <iostream>   >>> #include is preprocessor, <iostream> is a library
+using namespace std;  >>> using the standard namespace
+
+int main() {
+  double radius;      >>> assigning a variable as double, could initialize (radius = ...) in the same step
+  double area;
+
+  cout << "Enter a radius: ";
+  cin >> radius;
+
+  area = radius*radius*3.14159;
+  // End signs are only when variable is being used
+  cout << "The area is" << area << endl;
+
+  return 0;
+}
+
+if()
+{
+for more than one line, brackets are needed
+}
+short-circuit. if using "and" as an operator, and the first statement is false, then it will not evaluate the others and instead mark it as false.
+Ex. #include <iostream>
+using namespace std;
+
+int main()
+{
+  int number;
+  cout << "Enter an integer: ";
+  cin >> number;
+
+  if (number % 2 == 0 && number % 3 == 0)
+    cout << number << " is divisible by 2 and 3." << endl;
+
+  if (number % 2 == 0 || number % 3 == 0)
+    cout << number << " is divisible by 2 or 3." << endl;
+
+  if ((number % 2 == 0 || number % 3 == 0) &&
+       !(number % 2 == 0 && number % 3 == 0))
+    cout << number << " divisible by 2 or 3, but not both." << endl;
+
+  return(0);
+}
+Ternary operator: 
+if (x > 0)
+y = 1
+else
+y = -1;
+is equivalent to
+y = (x > 0) ? 1 : -1;
+(booleanExpression) ? expression1 : expression2
+
+// Function prototype- can declare a function (function header, function declaration)
+int max(int num1, int num2);
+double max(double num1, double num2);
+// Then int main()
+// If used, functions need to be written in the order they are called/used
+
+// Inline functions- before execution, at compiling. Decreases cost and execution time
+// ex. inline void f(int month, int year) 
+{
+  cout << "month is " << month << endl;
+  cout << "year is " << year << endl;
+}
+
+// int main()
+{
+  int month = 10, year = 2008;
+  f(month, year);  // Invoke inline function
+  f(9, 2010); // Invoke f with month 9 and year 2010
+
+  return 0;
+} 
+
+// Scope- from the declaration to the end of the block (end bracket)
+
+// Global variables- outside all functions, can be used in all functions (default value == 0)
+// Local variables- inside a function, can only be used in that function
+
+// Static local variables- after a function completes execution, all its local variables are destroyed. Static local variables retain their value for the lifetime of the program
+ex. static int x = 1;
+    int y = 1; // y will not be retained, x will.
+    // static variables only work with t1() or t2()?
