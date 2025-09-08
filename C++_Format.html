@@ -2,7 +2,7 @@
 #include <iostream>   >>> #include is preprocessor, <iostream> is a library
 using namespace std;  >>> using the standard namespace
 
-int main() {
+int main() {          >>> overloading involves using the same function name with different paramaters (signature- does NOT include return type). Header of function is prototype
   double radius;      >>> assigning a variable as double, could initialize (radius = ...) in the same step
   double area;
 
@@ -82,3 +82,24 @@ double max(double num1, double num2);
 ex. static int x = 1;
     int y = 1; // y will not be retained, x will.
     // static variables only work with t1() or t2()?
+
+// Reference variables- an alias for an already existing variable
+ex. int count = 1;
+    int& r = count;  // r is a reference variable to count.
+    r++;
+    count = 10;  // count and r are both 10 now.
+// Give & for acutal paramaters or arguments
+// const. int- cannot change the value
+
+Recursion- a function that calls itself
+One or more base cases- one or more base cases are used to stop encursion
+Break it into subproblems- if it resembles the original problem, apply the same approach.
+
+Factorial functions, permutations, base cases and recursive cases
+5! = 5 * 4!
+4! = 4 * 3!
+3! = 3 * 2!
+2! = 2 * 1!
+11! = 1
+// Example output, longer code
+S = abccba
