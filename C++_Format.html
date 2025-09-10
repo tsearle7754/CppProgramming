@@ -91,11 +91,11 @@ ex. int count = 1;
 // Give & for acutal paramaters or arguments
 // const. int- cannot change the value
 
-Recursion- a function that calls itself
-One or more base cases- one or more base cases are used to stop encursion
+// Recursion- a function that calls itself
+One or more base cases- one or more base cases are used to stop encursion (base case and recursive case. goes on for as long as base case is true)
 Break it into subproblems- if it resembles the original problem, apply the same approach.
 
-Factorial functions, permutations, base cases and recursive cases
+// Factorial functions, permutations, base cases and recursive cases
 5! = 5 * 4!
 4! = 4 * 3!
 3! = 3 * 2!
@@ -103,3 +103,27 @@ Factorial functions, permutations, base cases and recursive cases
 11! = 1
 // Example output, longer code
 S = abccba
+
+// Recursive Binary Search- all numbers should be in assorted form, ascending (or descendending). 3 cases, if the key is less than, greater than, or equal to the middle element.
+low = 0
+mid = (low + high) // 2
+high = 12
+int binarySearch(const int list[], int key, int size) {   // C++ has no built in function for size of array, so will have to declare as a parameter
+  int low = 0;
+  int high = size - 1;
+  return binarySearch(list, key, low, high);
+}
+ex. int i = binarySearch(list[], 2, 13);   // Will search for 2 in an array of size 13
+
+// How to access last element- list[list.size() -1] OR list[12] if size is 13
+
+
+// ex. array- int array[] = {2, 4, 7, 10, 11};  // size of array will be the number of elements in the brackets
+
+// Quiz on functions and recursion on Monday
+
+// Pointer variables (pointers)- hold memory addresses as their values, which in turn contains a specific type of declaration
+// can use the dereference operator (*) to access the actual value at a specific memory location
+// the ampersand symbol (&) is called the address operator when placed in front of a variable. returns the variable's address (&count = address of count)
+ex. int* ptr; // want to create a pointer type variablethat points to an integer
+char* ptr; // q will hold address of a character
