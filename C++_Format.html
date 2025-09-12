@@ -126,4 +126,23 @@ ex. int i = binarySearch(list[], 2, 13);   // Will search for 2 in an array of s
 // can use the dereference operator (*) to access the actual value at a specific memory location
 // the ampersand symbol (&) is called the address operator when placed in front of a variable. returns the variable's address (&count = address of count)
 ex. int* ptr; // want to create a pointer type variablethat points to an integer
-char* ptr; // q will hold address of a character
+char* ptr; // q will hold address of a character (3000, 2000, the location in memory of the variable)
+int x;
+x = 12;
+int* ptr;
+ptr = &x;
+cout << *ptr;  // unary operator is the dereference (tells it to print the value at that memory address *)
+*ptr = 5;  // changes the value of x to 5 (could be achieved by x = 5;)
+ex.    // Make sure the process is understandable and the outcome is predictable to you
+char ch;
+ch = "A";
+char* q;
+q = &ch;  // stores address in pointer variable q (ampersand sign points to address)
+*q = "Z"; // changes the value of ch to Z, not q to Z (q maintains the address of ch)
+char* p;
+p = q;  // p now points to 4000 (the address/value of q)
+// If *p2 = *p1, value pointed to by p2 = value pointed to by p1
+
+// Typedef- a pointer variable with the exisiting type, different name
+ex. typedef int integer;
+    typedef int* intPointer;  // can use intPointer, p1, p2;
