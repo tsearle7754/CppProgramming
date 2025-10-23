@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MySet.h"
+#include "Tambryn_Searle_Prob3_Assignment4.h"
 using namespace std;
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
     s2.printSet();
 
     MySet s3 = s1;      // copy constructor
-    if(s3.isEqualTo(s1)) cout << "s3 equals s1" << endl;
+    cout << "s3.isEqualTo(s) = " << s3.isEqualTo(s1) << endl;
 
     return 0;
 }

@@ -1,7 +1,7 @@
-#include <iostream>
+#include "Tambryn_Searle_Prob4_Assignment4.h"
 using namespace std;
 
-int average(const int*array, int size) {
+int average(const int* array, int size) {
     int sum = 0;
     for(int i = 0; i < size; i++) {
         sum += array[i];
@@ -15,15 +15,4 @@ double average(const double* array, int size) {
         sum += array[i];
     }
     return sum / size;
-}
-
-int main() {
-    double numbers[10];     // array to store input
-    cout << "Enter 10 numbers: " << endl;
-    for(int i = 0; i < 10; i++) {
-        cin >> numbers[i];
-    }
-
-    double avg = average(numbers, 10);
-    cout << "Average: " << avg << endl;
 }
