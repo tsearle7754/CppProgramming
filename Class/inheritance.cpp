@@ -10,4 +10,9 @@ using namespace std;
 // Child class function has priority- same as python
 // Test will be of the base class- #include each header file
 
-// Add to git the fuck
+// Can use any method from parent class with inheritance
+// Geometric object example from slides
+// If a function's parameter type is a base class, you may pass an object to this function of any of the derived classes
+// Cannot call parent class constructor from child class- must recreate in child class
+
+// slides
