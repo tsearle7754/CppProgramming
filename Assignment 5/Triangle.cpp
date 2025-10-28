@@ -26,7 +26,7 @@ double Triangle::getArea() const {
     return sqrt(s * (s - side1) * (s - side2) * (s - side3));
 }
 
-void display() const {
+void Triangle::display() const {
     cout << "Area: " << getArea() << ", Perimeter: " << getPerimeter()
     << ", Sides: " << side1 << ", " << side2 << ", " << side3 << endl;
 }
