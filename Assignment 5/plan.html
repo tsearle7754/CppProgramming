@@ -1,0 +1,18 @@
+
+
+PROB 3:
+Card object represents a single playing card-
+    face value: 0-12 ("Ace" to "King")
+    suit value: 0-3 ("Hearts", "Diamonds", "Clubs", "Spades")
+int face: index for card face
+int suit: index for card suit
+static vector<string> faces: shared names for faces
+static vector<string> suits: shared names for suits
+Constructor: sets the face and suit
+Accessors: return face and suit indices
+toString(): returns "face of suit" (ex. "King of Hearts")
+shuffle: loops through each index i, picks a random index k, and swaps deck[i] with deck[j]
+main::
+Make a deck.
+Shuffle it.
+Deal and print each card until the deck is empty.

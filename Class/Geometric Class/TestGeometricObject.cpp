@@ -34,5 +34,8 @@ int main()
     << " area: " << rectangle.getArea()
     << " perimeter: " << rectangle.getPerimeter() << endl;
 
+
+// Delete the toString from derivedRectangle so it will only call from GO
+
   return 0;
 }
