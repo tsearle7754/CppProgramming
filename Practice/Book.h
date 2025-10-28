@@ -9,6 +9,7 @@ private:
     string title;
     string author;
     bool checkedOut;
+    bool available;
 
 public:
     // constructors
@@ -20,6 +21,10 @@ public:
     void returnBook();
     bool isCheckedOut() const;
     string getInfo() const;
+
+    string getTitle() const;
+    string getAuthor() const;
+    bool isAvailable() const;
 };
 
 #endif

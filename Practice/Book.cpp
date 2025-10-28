@@ -11,6 +11,7 @@ Book::Book() {
 Book::Book(string t, string a) {
     title = t;
     author = a;
+    available = true;
     checkedOut = false;
 }
 
@@ -29,3 +30,7 @@ bool Book::isCheckedOut() const {
 string Book::getInfo() const {
     return title + " by " + author;
 }
+
+string Book::getTitle() const { return title; }
+string Book::getAuthor() const { return author; }
+bool Book::isAvailable() const { return available; }
