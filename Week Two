@@ -7,3 +7,10 @@ random numbers:
 mathematical functions:
 - header file is <cmath>
 - 
+Stack- bottom to top buckets, last in, first out: any activity in an array will be performed as a stack
+Variable of an array will store the value in the first bucket. If you wish to pass the entire array, must pass it as a pointer.
+Use new to create an array that can be used outside of the function (heap- perisistent, will stay in memory)
+C++ will create a default constructor and destructor. If not defined, it still runs, but there's nothing there so nothing happens.
+
+
+Quiz on chp 9 + 10 on Monday

@@ -1,0 +1,27 @@
+# include <iostream>
+using namespace std;
+// Go over overloading and quiz 2 outputs on microsoft teams with professor
+
+// Perform constructor overloading and funct overloading
+// Know data fields, properties, names for variables ---- ((data fields)/(properties)) = variables ---- behaviors = functions
+// Recursion practice
+// sort(s, s.size() - 1); figure out what this does
+void swap(int* pValue1, int* pValue2)        // Will display "swap 1 invoked" because num1 and num2 are passed as addresses (reference)
+{
+    cout << "swap 1 invoked" << endl;
+}
+
+void swap(int& pValue1, int& pValue2)       // Will be used if num1 and num2 ares passed as values, not by reference
+  {
+    cout << "swap 2 invoked" << endl;
+  }
+  
+int main()
+  {
+    int num1 = 1;
+    int num2 = 2;
+  
+    swap(&num1, &num2);
+  
+    return 0;
+  }

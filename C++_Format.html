@@ -88,8 +88,8 @@ ex. int count = 1;
     int& r = count;  // r is a reference variable to count.
     r++;
     count = 10;  // count and r are both 10 now.
-// Give & for acutal paramaters or arguments
-// const. int- cannot change the value
+// Give & for actual paramaters or arguments
+// const int- cannot change the value
 
 // Recursion- a function that calls itself
 One or more base cases- one or more base cases are used to stop encursion (base case and recursive case. goes on for as long as base case is true)
@@ -125,7 +125,7 @@ ex. int i = binarySearch(list[], 2, 13);   // Will search for 2 in an array of s
 // Pointer variables (pointers)- hold memory addresses as their values, which in turn contains a specific type of declaration
 // can use the dereference operator (*) to access the actual value at a specific memory location
 // the ampersand symbol (&) is called the address operator when placed in front of a variable. returns the variable's address (&count = address of count)
-ex. int* ptr; // want to create a pointer type variablethat points to an integer
+ex. int* ptr; // want to create a pointer type variable that points to an integer
 char* ptr; // q will hold address of a character (3000, 2000, the location in memory of the variable)
 int x;
 x = 12;
@@ -145,4 +145,77 @@ p = q;  // p now points to 4000 (the address/value of q)
 
 // Typedef- a pointer variable with the exisiting type, different name
 ex. typedef int integer;
-    typedef int* intPointer;  // can use intPointer, p1, p2;
+    typedef int* intPointer;  // can use intPointer** p1, p2;
+    double* const pValue = &radius;  // pValue is a const pointer to a double value
+  
+// Arrays and Pointers
+void printArray(const int* list, int size) {
+  for (int i = 0; i < size; i++)
+  cout << list[i] << endl;
+}
+int main() {
+  int list[6] = {11, 12, 13, 14, 15, 16};  // this is an array with 6 values
+  int* p = reverse(list, 6);
+  printArray(p, 6);
+  return 0;
+}
+
+// Function call and pointer variables
+void f(int* p1, int* &p2)  // this is same as below
+typedef int* intPointer;
+void f(intPointer p1, intPointer& p2)  // same as above. Here, p1 is pass-by-value and p2 is pass-by-reference
+
+// Function to swap list i with list j
+int* reverse(int* list, int size) {
+  for(int i = 0, j = size - 1; i < j; i++, j--)
+  {
+    int temp = list[j];
+    list[j] = list[i];
+    list[i] = temp;
+  }
+  return list;
+}
+
+// Array- collectio of the same data types. Can access each element using an index. Arrays can have 10 elements, no more.
+datatype arrayName[arraySize]; // can initialize as well(= {value0, value1... valuek};)
+arrayName[place] = value;
+
+// Passing array to functions- can pass one value, or can pass the whole array. Should also pass the size of the array as a parameter.
+// Passing an array variable means the starting address of the array is passed to the formal parameter BY VALUE
+ex. void printArray(int list[], int arraySize);
+int main() {
+  int numbers[6] = {1, 4, 3, 6, 8, 9};
+  rintArray(numbers, 6);  // passing the whole array
+}
+void printArray(int list[], int arraySize) {
+  for (int i = 0; i < arraySize; i++)
+    cout << list[i] << " ";
+}
+
+// Const variables- a readable, not changeable variable
+// Use const when you do not want a function to change the value of an argument
+// newList is the reversal of list
+void reverse(const int list[], int newList[], int size) {
+  for (int i = 0, j = size - 1; i < size; i++, j--) {
+    newList[j] = list[i];
+  }
+}
+void printArray(const int list[], int size) {
+  for (int i = 0; i < size; i++)
+    cout << list[i] << " ";
+}
+int main() {
+  const int SIZE = 6;
+  int list[] = {1, 2, 3, 4, 5, 6};
+  int newList[SIZE];
+  reverse(list, newList, SIZE);
+  cout << "The original array: ";
+  printArray(list, SIZE);
+  cout << endl;
+  cout << "The reversed array: ";
+  printArray(newList, SIZE);
+  cout << endl;
+  return 0;
+}
+// Cannot return an array from a function
+// Can circumvent this by passing two array arguments in the function
