@@ -1,0 +1,5 @@
+# Ignore local VS Code settings
+.vscode/
+git rm -r --cached .vscode
+git commit -m "Ignore local VS Code settings"
+git push origin main
