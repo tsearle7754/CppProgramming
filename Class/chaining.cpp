@@ -3,11 +3,12 @@ using namespace std;
 
 //chp 12 and 14 quiz
 //office hours to go over exam scores 
+// Mon 11:15 AM – 12:15 PM BARC 2231
 
 // Base class
 class BaseClass {
 private:
-    int x, y;
+    int _x, _y;
 
 public:
     BaseClass(int _x, int _y) {
@@ -27,5 +28,4 @@ private:
 
 public:
     
-}
-class
+};
