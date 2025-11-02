@@ -12,7 +12,7 @@ bool isGreater(const T list1[], const T list2[], int size1, int size2) {
     }
     T min2 = list2[0];
     for(int j = 1; j < size2; j++) {
-        if(list2[i] < min2) {
+        if(list2[j] < min2) {
             min2 = list2[j];
         }
     }
