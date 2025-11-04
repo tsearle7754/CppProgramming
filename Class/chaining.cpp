@@ -29,3 +29,14 @@ private:
 public:
     
 };
+
+// look into faculty, other derived classes
+
+// virtual functions- dynamic binding-- can be overridden by derived classes
+// pass by reference for dynamic binding
+
+// dynamic binding- will choose which function at runtime
+// static binding- will choose which function at compile time
+// if a function is defined virtual in a base class, it is virtual in all derived classes (no need to add virtual keyword for child)
+// override had diff signature, redefine is the same everything
+    //
