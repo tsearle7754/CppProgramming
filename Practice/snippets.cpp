@@ -132,7 +132,7 @@ public:
 };
 
 const Item& cheaperItem(const Item& a, const Item& b) {
-    return a.price < b.price ? a : b;
+    return (*a.price < *b.price) ? a : b;
 }
 
 class Student {
@@ -178,7 +178,7 @@ public:
     }
 
     void display() {
-        cout << "Name: " << name << "GPA: " << *gpa << endl;
+        cout << "Name: " << name << ", GPA: " << *gpa << endl;
     }
 };
 
