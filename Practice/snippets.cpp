@@ -131,6 +131,7 @@ public:
     }
 };
 
+int Item::count = 0;
 const Item& cheaperItem(const Item& a, const Item& b) {
     return (*a.price < *b.price) ? a : b;
 }
@@ -182,6 +183,7 @@ public:
     }
 };
 
+int Student::count = 0;
 const Student& higherGPA(const Student& a, const Student& b) {
     return (*a.gpa > *b.gpa) ? a : b;
 }
@@ -197,6 +199,38 @@ public:
         age = a;
         name = new char(l);
         
+    }
+};
+
+class Ratings {
+private:
+    double* scores;
+    int size;
+
+public:
+    Ratings(int n) {
+        size = n;
+        scores = new double[size];
+        for(int i = 0; i < size; i++) {
+            scores[i] = 0;
+        }
+    }
+
+    void setRating(int index, double value) {
+        if(index >= 0 && index < size) {
+            scores[index] = value;
+        } else {
+            cout << "Invalid index" << endl;
+        }
+
+    }
+
+    void display() const {
+        cout << "Ratings: ";
+        for(int i = 0; i < size; i++) {
+            cout << scores[i] << " ";
+        }
+        cout << endl;
     }
 };
 
@@ -260,6 +294,12 @@ int main() {
 
     delete s1;
     cout << "After deleting p1, count: " << Student::getCount() << endl;
+
+    Ratings r1(3);
+    r1.setRating(0, 4.5);
+    r1.setRating(1, 3.8);
+    r1.setRating(2, 5.0);
+    r1.display();
 
     return 0;
 }
