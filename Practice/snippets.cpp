@@ -116,7 +116,7 @@ public:
     }
 
     ~Item() {
-        delete [] price;
+        delete price;
         count--;
     }
 
@@ -185,6 +185,20 @@ public:
 const Student& higherGPA(const Student& a, const Student& b) {
     return (*a.gpa > *b.gpa) ? a : b;
 }
+
+class Person {
+private:
+    char* name;
+    int age;
+
+public:
+    Person(char n, int a) {
+        int l;
+        age = a;
+        name = new char(l);
+        
+    }
+};
 
 int main() {
     vector<Book> books;
