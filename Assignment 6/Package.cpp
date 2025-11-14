@@ -5,7 +5,7 @@ using namespace std;
 // define static member
 int Package::ID = 0;
 
-// constructor
+// Constructor
 Package::Package(const string& name, const string& address, const string& city, 
                  const string& state, int ZIP, double weight, double cost) 
 {
@@ -13,15 +13,16 @@ Package::Package(const string& name, const string& address, const string& city,
     this->address = address;
     this->city = city;
     this->state = state;
+    setWeight(weight);
+    setCostPerOunce(cost);
     this->ZIP = ZIP;
-   // setWeight(weight);    -- verify why these lines exist
-    // setCostPerOunce(cost);
 
     // increment the static ID counter
     ID++;
+    id = ID;
 }
 
-// mutators
+// Mutators
 void Package::setWeight(double w) {
     if (w > 0) {
         weight = w;
@@ -40,14 +41,14 @@ void Package::setCostPerOunce(double c) {
     }
 }
 
-// functions
+// Functions
 double Package::calculateCost() const {
     return (weight * cost);
 }
 
 void Package::printPackageInfo() const {
     cout << "-----------------------------------" << endl;
-    cout << "Package ID " << ID << ":" << endl;
+    cout << "Package ID " << id << ":" << endl;
     cout << name << endl;
     cout << address << endl;
     cout << city << ", " << state << " " << ZIP << endl;

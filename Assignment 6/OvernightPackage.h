@@ -5,18 +5,19 @@
 using namespace std;
 
 class OvernightPackage: public Package {
-private:
+protected:
     double fee;
 
 public:
     // Constructor
     OvernightPackage(const std::string& name, const std::string& address, const std::string& city, 
-                        const std::string& state, int ZIP, double w, double cost, double fee);
+                        const std::string& state, int ZIP, double w, double cost, int id, double fee);
 
     // Mutator
-    double setOvernightFeePerOunce();
+    void setOvernightFeePerOunce(double f);
 
     // Function
+    double calculateCost() const override;
     void printPackageInfo() const override;
 };
 

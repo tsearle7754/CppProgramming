@@ -11,7 +11,7 @@ protected:
 public:
     // Constructor
     TwoDayPackage(const std::string& name, const std::string& address, const std::string& city, 
-                    const std::string& state, int ZIP, double w, double cost, double fee);
+                    const std::string& state, int ZIP, double w, double cost, int id, double fee);
 
     // Mutator
     void setFlatFee(double f);

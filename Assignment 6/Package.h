@@ -13,6 +13,7 @@ protected:
     double weight;
     double cost;
     static int ID;
+    int id;
 
 public:
     // Constructor

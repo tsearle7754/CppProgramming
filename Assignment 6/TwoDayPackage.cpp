@@ -3,31 +3,31 @@
 #include <iostream>
 using namespace std;
 
-// constructor
+// Constructor
 TwoDayPackage::TwoDayPackage(const std::string& name, const std::string& address, const std::string& city, 
-                        const std::string& state, int ZIP, double w, double cost, double fee) : 
-                        Package(name, address, city, state, ZIP, w, cost) {
+                        const std::string& state, int ZIP, double w, double cost, int id, double fee) : 
+                        Package(name, address, city, state, ZIP, w, cost, id) {
                         this->fee = fee;
                     }
 
-// mutator
+// Mutator
 void TwoDayPackage::setFlatFee(double f) {
     if (f > 0) {
         fee = f;
     } else {
-        cout << "Invalid input. Setting value to 0." << endl;
+        cout << "Invalid input. Setting flat fee to 0." << endl;
         fee = 0.0;
     }
 }
 
-// function
+// Function
 double TwoDayPackage::calculateCost() const{
     return fee + (weight * cost);
 }
 
 void TwoDayPackage::printPackageInfo() const {
     cout << "-----------------------------------" << endl;
-    cout << "Two Day Package ID " << ID << ":" << endl;
+    cout << "Two Day Package ID " << id << ":" << endl;
     cout << name << endl;
     cout << address << endl;
     cout << city << ", " << state << " " << ZIP << endl;
