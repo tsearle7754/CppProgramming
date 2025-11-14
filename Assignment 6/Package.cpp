@@ -14,8 +14,8 @@ Package::Package(const string& name, const string& address, const string& city,
     this->city = city;
     this->state = state;
     this->ZIP = ZIP;
-    setWeight(weight);
-    setCostPerOunce(cost);
+   // setWeight(weight);    -- verify why these lines exist
+    // setCostPerOunce(cost);
 
     // increment the static ID counter
     ID++;

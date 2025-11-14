@@ -17,7 +17,7 @@ public:
     double setOvernightFeePerOunce();
 
     // Function
-    void printPackageInfo();
+    void printPackageInfo() const override;
 };
 
 #endif

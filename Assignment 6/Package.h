@@ -4,7 +4,7 @@
 using namespace std;
 
 class Package {
-private:
+protected:
     string name;
     string address;
     string city;
@@ -23,8 +23,8 @@ public:
     void setCostPerOunce(double c);
 
     // Functions
-    double calculateCost() const;
-    void printPackageInfo() const;
+    virtual double calculateCost() const;
+    virtual void printPackageInfo() const;
 };
 
 #endif

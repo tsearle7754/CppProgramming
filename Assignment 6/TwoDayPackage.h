@@ -5,7 +5,7 @@
 using namespace std;
 
 class TwoDayPackage : public Package {
-private:
+protected:
     double fee;
 
 public:
@@ -14,11 +14,11 @@ public:
                     const std::string& state, int ZIP, double w, double cost, double fee);
 
     // Mutator
-    double setFlatFee();
+    void setFlatFee(double f);
 
     // Functions
-    double calculateCost();
-    void printPackageInfo();
+    double calculateCost() const override;
+    void printPackageInfo() const override;
 };
 
 #endif

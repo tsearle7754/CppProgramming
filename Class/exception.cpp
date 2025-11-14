@@ -45,3 +45,12 @@ int main()
 
   return 0;
 }
+
+// for multiple catch for one try- lowest level type must be at top (child, then parent...)
+    // otherwise, parent will execute and child will not-- product of inherited derived exceptions
+
+// Custom exception classes
+    // class TriangleException: public logic_error-- gets the built-in functions w/o writing from scratch
+
+// Multiple catches
+
