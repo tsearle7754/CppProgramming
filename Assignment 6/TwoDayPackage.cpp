@@ -5,8 +5,8 @@ using namespace std;
 
 // Constructor
 TwoDayPackage::TwoDayPackage(const std::string& name, const std::string& address, const std::string& city, 
-                        const std::string& state, int ZIP, double w, double cost, int id, double fee) : 
-                        Package(name, address, city, state, ZIP, w, cost, id) {
+                        const std::string& state, int ZIP, double w, double cost, double fee) : 
+                        Package(name, address, city, state, ZIP, w, cost) {
                         this->fee = fee;
                     }
 
