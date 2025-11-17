@@ -15,7 +15,6 @@ using namespace std;
 // If a function's parameter type is a base class, you may pass an object to this function of any of the derived classes
 // Cannot call parent class constructor from child class- must recreate in child class
 
-<<<<<<< HEAD
 // Constructor and destructor chaining
 // constructing an instance of a class invokes the constructors of all the base classes along the inheritance chain
 // base class constructor executes, then derived class - destroyed in opposite order
@@ -29,6 +28,4 @@ using namespace std;
 // look at BaseClass example on Canvas
 
 // Polymorphism: 
-=======
 // slides
->>>>>>> recovered-codespaces
