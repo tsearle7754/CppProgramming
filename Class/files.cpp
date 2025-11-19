@@ -37,4 +37,5 @@ int main()
     }
 
 // testing file existance: .fail()- if it comes we'll still be prepared
-// .eof() function will; why are owie oH!
+// .eof() function will
+// know how to append file- not for exam but should know
