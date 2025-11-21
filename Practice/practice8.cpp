@@ -2,7 +2,7 @@
 using namespace std;
 
 class LivingThing {
-protected:
+public:
     LivingThing() {
         cout << "This is the constructor of LivingThing class." << endl;
     }
@@ -12,8 +12,8 @@ protected:
     }
 };
 
-class Animal: public LivingThing {
-protected:
+class Animal: virtual public LivingThing {
+public:
     Animal() {
         cout << "This is the constructor of Animal class." << endl;
     }
@@ -23,8 +23,8 @@ protected:
     }    
 };
 
-class Plant: public LivingThing {
-protected:
+class Plant: virtual public LivingThing {
+public:
     Plant() {
         cout << "This is the constructor of Plant class." << endl;
     }
@@ -34,8 +34,8 @@ protected:
     }    
 };
 
-class Fish: public Animal {
-protected:
+class Fish:  virtual public Animal {
+public:
     Fish() {
         cout << "This is the constructor of Fish class." << endl;
     }
@@ -46,7 +46,7 @@ protected:
 };
 
 class Mammal: public Animal {
-protected:
+public:
     Mammal() {
         cout << "This is the constructor of Mammal class." << endl;
     }
@@ -57,7 +57,7 @@ protected:
 };
 
 class Tree: public Plant {
-protected:
+public:
     Tree() {
         cout << "This is the constructor of Tree class." << endl;
     }
@@ -68,7 +68,7 @@ protected:
 };
 
 class Sardine: public Fish {
-protected:
+public:
     Sardine() {
         cout << "This is the constructor of Sardine class." << endl;
     }
@@ -79,7 +79,7 @@ protected:
 };
 
 class Bass: public Fish {
-protected:
+public:
     Bass() {
         cout << "This is the constructor of Bass class." << endl;
     }
@@ -101,7 +101,7 @@ protected:
 };
 
 class Tiger: public Cat {
-protected:
+public:
     Tiger() {
         cout << "This is the constructor of Tiger class." << endl;
     }
@@ -123,7 +123,7 @@ protected:
 };
 
 class Chestnut: public Tree {
-protected:
+public:
     Chestnut() {
         cout << "This is the constructor of Chestnut class." << endl;
     }
@@ -134,7 +134,7 @@ protected:
 };
 
 class Cherry: public Tree {
-protected:
+public:
     Cherry() {
         cout << "This is the constructor of Cherry class." << endl;
     }
