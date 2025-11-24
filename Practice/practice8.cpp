@@ -154,3 +154,4 @@ int main() {
 
 // Make LivingThing virtual, public, const and overrideable
 // Add override to each toString() function
+// anything after exam 2 is lkely to have long questions in the exam
