@@ -7,22 +7,19 @@ int main() {
     Triangle t2(5, 5, 2);
     Triangle t3(5.5, 5.5, 1);
 
-    cout << "Triangle t1:\n";
     t1.display();
-    cout << endl;
-
-    cout << "Triangle t2:\n";
     t2.display();
-    cout << endl;
-
-    cout << "Triangle t3:\n";
     t3.display();
-    cout << endl;
 
-    cout << "Comparisons:\n";
-    cout << "t1 < t2: " << (t1 < t2) << endl;
-    cout << "t2 >= t3: " << (t2 >= t3) << endl;
-    cout << "t1 != t3: " << (t1 != t3) << endl;
+    if (t1 < t2)
+        cout << "t1 is smaller than t2" << endl;
+    else
+        cout << "t1 is not smaller than t2" << endl;
+
+    if (t1 != t2)
+        cout << "t1 and t2 are different" << endl;
+    else
+        cout << "t1 and t2 are the same" << endl;
 
     return 0;
 }
