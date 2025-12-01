@@ -57,3 +57,5 @@ int main()
 
 // getline(input, city, '#'); -- read a city with a delimiter
 // different getline for different ways files are set up
+
+// mcq or fill in for files- big questions will be on inheritance/polymorphism

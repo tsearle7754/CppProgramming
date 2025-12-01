@@ -12,7 +12,7 @@ public:
         name = n;
         grade = new double(g);
     }
-
+    // deep copy
     Student(const Student& other) {
         name = other.name;
         grade = new double(*other.grade);

@@ -26,7 +26,7 @@ double getArea(double radius)
 
 int main()
 {
-  // Pormpt the user to enter radius
+  // Prompt the user to enter radius
   cout << "Enter radius: ";
   double radius;
   cin >> radius;
@@ -52,5 +52,7 @@ int main()
 // Custom exception classes
     // class TriangleException: public logic_error-- gets the built-in functions w/o writing from scratch
 
-// Multiple catches
+// const char* what() const noexcept override {} -- return a phrase specific to that class
+
+
 
