@@ -29,7 +29,7 @@ double Circle2D::getX() const { return x; }
 double Circle2D::getY() const { return y; }
 double Circle2D::getRadius() const { return radius; }
 
-int Circle2D::getNumberOfCircles() {
+int Circle2D::getNumberOfCircles(int numberOfCircles) {
     return numberOfCircles;
 }
 
