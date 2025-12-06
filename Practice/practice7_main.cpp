@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     Circle2D* pCir1 = new Circle2D(2, 2, 5.5);
     Circle2D cir2(-6, -3, 1.5);
-    cout << Circle2D::getNumberOfCircles() << endl;
+    cout << Circle2D::getNumberOfCircles(3) << endl;
     Circle2D cir3(cir2);
 
     if(pCir1->overlaps(cir2))
@@ -20,5 +20,5 @@ int main() {
         cout << "cir3 does not overlap cir2" << endl;
 
     delete pCir1;
-    cout << Circle2D::getNumberOfCircles() << endl;
+    cout << Circle2D::getNumberOfCircles(2) << endl;
 }

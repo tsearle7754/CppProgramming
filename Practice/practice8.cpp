@@ -145,7 +145,7 @@ public:
 };
 
 void display(const LivingThing& obj) {
-    obj.toString();
+
 }
 
 int main() {
